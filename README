@@ -1,0 +1,2 @@
+I was inspired after reading http://agileotter.blogspot.com/2011/01/django-unit-test-hobby.html 
+to explore unit testing proper (with no environment setup) in Django.
