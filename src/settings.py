@@ -47,7 +47,7 @@ MASHER_COMPRESS = True
 
 # Test settings
 SOUTH_TESTS_MIGRATE = False
-TEST_RUNNER = 'django_testing.TestSuiteRunner'
-TEST_OUTPUT_VERBOSE = False
-TEST_OUTPUT_DESCRIPTIONS = False
-TEST_OUTPUT_DIR = 'xmlrunner'
+#TEST_RUNNER = 'django_testing.TestSuiteRunner'
+#TEST_OUTPUT_VERBOSE = False
+#TEST_OUTPUT_DESCRIPTIONS = False
+#TEST_OUTPUT_DIR = 'xmlrunner'

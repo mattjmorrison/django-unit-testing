@@ -1,6 +1,6 @@
 from django.test.simple import DjangoTestSuiteRunner
 
-class TestSuiteRunner(DjangoTestSuiteRunner):
+class UnitTestSuiteRunner(DjangoTestSuiteRunner):
 
     def run_tests(self, test_labels, extra_tests=None, **kwargs):
         suite = self.build_suite(test_labels, extra_tests)

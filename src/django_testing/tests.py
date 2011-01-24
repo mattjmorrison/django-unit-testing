@@ -10,4 +10,8 @@ class Tests(unittest.TestCase):
         samples = models.Sample.objects.all()
         self.assertEqual(objects.all.return_value, samples)
 
+class Other(unittest.TestCase):
+
+    def test_another_thing(self):
+        self.fail("hi!!!")
         
