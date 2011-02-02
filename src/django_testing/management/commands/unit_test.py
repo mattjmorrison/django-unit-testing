@@ -6,12 +6,13 @@ from django_testing import UnitTestSuiteRunner
 
 class Command(BaseCommand):
     option_list = BaseCommand.option_list + (
-        make_option('--noinput', action='store_false', dest='interactive', default=True,
-            help='Tells Django to NOT prompt the user for input of any kind.'),
+        make_option('--noinput', action='store_false', dest='interactive',
+                    default=True, help='Tells Django to NOT prompt the user for input of any kind.'),
         make_option('--failfast', action='store_true', dest='failfast', default=False,
             help='Tells Django to stop running the test suite after first failed test.')
     )
-    help = 'Runs the test suite for the specified applications, or the entire site if no apps are specified.'
+    help = 'Runs the test suite for the specified applications, or the entire site if no'
+    help += 'apps are specified.'
     args = '[appname ...]'
 
     def handle(self, *test_labels, **options):
@@ -19,7 +20,8 @@ class Command(BaseCommand):
         interactive = options.get('interactive', True)
         failfast = options.get('failfast', False)
 
-        test_runner = UnitTestSuiteRunner(verbosity=verbosity, interactive=interactive, failfast=failfast)
+        test_runner = UnitTestSuiteRunner(verbosity=verbosity, interactive=interactive,
+                                          failfast=failfast)
         failures = test_runner.run_tests(test_labels)
 
         if failures:
